@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700;900&display=swap');
+
+:root {
+  font-family: 'Poppins';
+}
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0px;
+  font-family: 'Poppins';
+}
+
+.nav {
+  height: 100px;
+  width: 100%;
+  background-color: #26419a;
+  position: fixed;
+  z-index: 1;
+  padding-right: 10px;
+
+}
+
+.nav-logo {
+  height: 60px;
+  padding-top: 15px;
+  margin-left: 20px;
+}
+
+.nav>.nav-header {
+  display: inline;
+}
+
+.nav>.nav-header>.nav-title {
+  display: inline-block;
+  font-size: 22px;
+  color: #fff;
+  padding: 10px 10px 10px 10px;
+}
+
+.nav>.nav-btn {
+  display: none;
+}
+
+.nav>.nav-links {
+  display: inline;
+  float: right;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.nav>.nav-links>a {
+  display: inline-block;
+  padding: 35px 25px 35px 25px;
+  text-decoration: none;
+  color: #efefef;
+}
+
+.nav>.nav-links>a:hover {
+  color: #898dcf;
+}
+
+.nav>#nav-check {
+  display: none;
+}
+
+.Home-content{
+    background-color: #898dcf;
+    padding-top: 100px;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+    height: 100vh;
+}
+
+.div-inside{
+    width:200px;
+    height:200px;
+    background-color: #58b37e;
+    text-align: center;
+}
+
+
+@media (max-width:900px) {
+    .nav{
+      height:80px;
+    }
+  
+    .nav-logo{
+      padding-top: 0px;
+      margin-left: 5px;
+    }
+  
+  
+    .nav>.nav-btn {
+      display: inline-block;
+      position: absolute;
+      right: 20px;
+      top: 20px;
+    }
+  
+    .nav>.nav-btn>label {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      padding: 13px;
+    }
+  
+    .nav>.nav-btn>label:hover,
+    .nav #nav-check:checked~.nav-btn>label {
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+  
+    .nav>.nav-btn>label>span {
+      display: block;
+      width: 25px;
+      height: 10px;
+      border-top: 2px solid #eee;
+    }
+  
+    .nav>.nav-links {
+      position: absolute;
+      display: block;
+      width: 50%;
+      max-height:340px;
+      background-color: #FFCB0A;
+      opacity: .9;
+      transition: all 0.3s ease-in;
+      overflow: hidden;
+      top:80px;
+      right: 0px;
+      border-radius: 10px;
+      padding: 0 0 0 0 ;
+    }
+  
+    .nav>.nav-links>a {
+      display: block;
+      width: 100%;
+      color:black;
+      padding: 20px 0 20px 30px;
+    }
+  
+    .nav>.nav-links>a:hover {
+      color:#009743;
+    }
+    
+  
+    .nav>#nav-check:not(:checked)~.nav-links {
+      height: 0px;
+    }
+  
+    .nav>#nav-check:checked~.nav-links {
+      height: calc(70vh - 5px);
+      overflow-y: auto;
+    }
+
+}
